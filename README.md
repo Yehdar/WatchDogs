@@ -13,3 +13,6 @@ Verifies if the messages have been transmitted through gRPC in Go
 `export PATH=$PATH:$GOBIN`\
 If not, then add them.
 4. Run `protoc --go_out=. --go-grpc_out=. --plugin=protoc-gen-go=$GOBIN/protoc-gen-go --plugin=protoc-gen-go-grpc=$GOBIN/protoc-gen-go-grpc {pwd}`. For example. you can replace pwd with "/home/computer-name/projects-directory/project-name/proto-folder/proto-file"
+
+### Missing packages
+1. Run `go mod tidy` in the terminal to update go.mod with the missing packages
