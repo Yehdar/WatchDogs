@@ -6,16 +6,16 @@ package greet_service;
 
 service GreetService {
   // unary rpc
-  rpc SayHello(NoParam) returns (HelloReponse);
+  rpc SayHello(NoParam) returns (HelloResponse);
 
   // server streaming rpc
-  rpc SayHelloServerStreaming(NamesList) returns (stream HelloReponse);
+  rpc SayHelloServerStreaming(NamesList) returns (stream HelloResponse);
 
   // client streaming rpc
   rpc SayHelloClientStreaming(stream HelloRequest) returns (MessagesList);
 
   // bidirectional streaming rpc
-  rpc SayHelloBidirectionalStreaming(stream HelloRequest) returns (stream HelloReponse);
+  rpc SayHelloBidirectionalStreaming(stream HelloRequest) returns (stream HelloResponse);
 }
 
 message NoParam {};
