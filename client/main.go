@@ -17,7 +17,7 @@ func main() {
   if err != nil {
     log.Fatalf("did not connect: %v", err)
   }
-  def conn.Close()
+  defer conn.Close()
 
 
 }
