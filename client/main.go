@@ -19,5 +19,7 @@ func main() {
   }
   defer conn.Close()
 
+  client := pb.NewGreetServiceClient(conn)
 
+  callSayHello(client)
 }
