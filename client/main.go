@@ -22,7 +22,7 @@ func main() {
   client := pb.NewGreetServiceClient(conn)
 
   names := &pb.NamesList {
-    Names: []string{"Bruce Wayne"},
+    Names: []string{"Bruce Wayne", "Clark Kent", "Dick Grayson"},
   }
 
   //  unary rpc
