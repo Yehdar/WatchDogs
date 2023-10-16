@@ -29,6 +29,9 @@ func main() {
   //  callSayHello(client)
     
   // server streaming rpc
-  callSayHelloServerStream(client, names)
+  // callSayHelloServerStream(client, names)
+  
+  // client streaming rpc
+  callSayHelloClientStream(client, names)
 
 }
