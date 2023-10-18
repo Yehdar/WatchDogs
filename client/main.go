@@ -32,6 +32,8 @@ func main() {
   // callSayHelloServerStream(client, names)
   
   // client streaming rpc
-  callSayHelloClientStream(client, names)
+  // callSayHelloClientStream(client, names)
 
+  // bidirectional streaming rpc
+  callSayHelloBidirectionalStream(client, names)
 }
