@@ -5,12 +5,14 @@ import (
   "io"
   "log"
   "time"
+  "github.com/fatih/color"
   
   pb "github.com/yehdar/watchdogs/proto"
 )
 
 func callSayHelloBidirectionalStream(client pb.GreetServiceClient, names *pb.NamesList){
-  log.Printf("Bidirectional Streaming Started")
+  // log.Printf("Bidirectional streaming RPC started")
+  color.Cyan("Bidirectional streaming RPC started")
   stream, err := client.SayHelloBidirectionalStreaming(context.Background())
   if err != nil {
     log.Fatalf("could not send names: %v", err)

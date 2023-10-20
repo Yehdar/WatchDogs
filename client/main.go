@@ -25,14 +25,14 @@ func main() {
     Names: []string{"Bruce Wayne", "Clark Kent", "Dick Grayson"},
   }
 
-  //  unary rpc
-  //  callSayHello(client)
+  // unary rpc
+  callSayHello(client)
     
   // server streaming rpc
-  // callSayHelloServerStream(client, names)
+  callSayHelloServerStream(client, names)
   
   // client streaming rpc
-  // callSayHelloClientStream(client, names)
+  callSayHelloClientStream(client, names)
 
   // bidirectional streaming rpc
   callSayHelloBidirectionalStream(client, names)

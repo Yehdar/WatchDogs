@@ -4,12 +4,15 @@ import (
   "context"
   "log"
   "time"
+  "fmt"
+  "github.com/fatih/color"
 
   pb "github.com/yehdar/watchdogs/proto"
 )
 
 func callSayHelloClientStream(client pb.GreetServiceClient, names *pb.NamesList) {
-  log.Printf("Client streaming started")
+  // log.Printf("Client streaming RPC started")
+  color.Cyan("Client streaming RPC started")
   stream, err := client.SayHelloClientStreaming(context.Background())
   if err != nil {
     log.Fatalf("could not send names: %v", err)
@@ -32,4 +35,5 @@ func callSayHelloClientStream(client pb.GreetServiceClient, names *pb.NamesList)
     log.Fatalf("Error while receiving %v", err)
   }
   log.Printf("%v", res.Messages)
+  fmt.Printf("\n")
 }
