@@ -2,6 +2,8 @@
 ## Abstract
 Verifies if the messages have been transmitted through gRPC in Go 
 
+<p align="center"><img src="https://github.com/Yehdar/watchdogs/blob/main/demo/demo.png" width="80%"></p>
+
 ## Notes
 ### Generating Go and gRPC code from greet.proto
 1. Install protobuf compilter: `sudo apt install protobuf-compiler`
