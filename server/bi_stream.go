@@ -3,11 +3,13 @@ package main
 import (
   "io"
   "log"
+  "github.com/fatih/color"
 
   pb "github.com/yehdar/watchdogs/proto"
 )
 
 func (s *helloServer) SayHelloBidirectionalStreaming(stream pb.GreetService_SayHelloBidirectionalStreamingServer) error {
+  color.Cyan("\nBidirectional streaming RPC started")
   for {
     req, err := stream.Recv()
     if err == io.EOF {
