@@ -4,6 +4,8 @@ Verifies if the messages have been transmitted through gRPC in Go
 
 <p align="center"><img src="https://github.com/Yehdar/watchdogs/blob/main/demo/demo.png" width="80%"></p>
 
+<hr> 
+
 ## Notes
 ### Understanding gRPC
 #### Unary RPC
@@ -29,6 +31,7 @@ If not, then add them.
 ### Missing packages
 1. Run `go mod tidy` in the terminal to update go.mod with the missing packages
 
+<hr>
 
 ## Configuration
 1. Git clone the repository and cd into the project directory
