@@ -28,3 +28,9 @@ If not, then add them.
 
 ### Missing packages
 1. Run `go mod tidy` in the terminal to update go.mod with the missing packages
+
+
+## Configuration
+1. Git clone the repository and cd into the project directory
+2. Set your network constants in the config file and then cd into the server directory to boot up the server-side by running `go run *`
+3. Head to the client directory to turn on the client-side by running `go run *`
