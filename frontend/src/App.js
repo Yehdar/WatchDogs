@@ -3,8 +3,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Video Streaming Platform</h1>
+    <div className="App" class="flex justify-center">
+      <h1 class="text-3xl font-bold">Video Streaming Platform</h1>
       <video width="700px" height="400px" controls>
         <source
           src="https://d2i8zdo0i9xncc.cloudfront.net/Kobe%20Bryant%20&%20Kanye%20West%20.mp4"
