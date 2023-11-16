@@ -1,13 +1,17 @@
 # WatchDogs
 ## Abstract
-Verifies if the messages have been transmitted through gRPC in Go 
+Video streaming platform 
+<p align="center"><img src="https://github.com/Yehdar/watchdogs/blob/main/demo/demo1.png" width="80%"></p>
 
-<p align="center"><img src="https://github.com/Yehdar/watchdogs/blob/main/demo/demo.png" width="80%"></p>
+### Technologies Used
+AWS (S3, CloudFront), JavaScript, ReactJS, TailwindCSS, Go, gRPC, Protobuf, Docker
 
 <hr> 
 
 ## Notes
 ### Understanding gRPC
+<p align="center"><img src="https://github.com/Yehdar/watchdogs/blob/main/demo/demo.png" width="80%"></p>
+
 #### Unary RPC
 Think of this as a simple request-response where the client sends a single request to the server and receives a single response. As an analogy, think of requesting a food order at a restaurant and receiving that order as a response.
 #### Server Streaming RPC
