@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "./proto";
+
+service CommentService {
+  rpc GetComments (Empty) returns (Comments);
+  rpc AddComment (CommentRequest) returns (Empty);
+}
+
+message CommentRequest {
+  string text = 1;
+}
+
+message Comments {
+  repeated string comments = 1;
+}
+
+message Empty {}
