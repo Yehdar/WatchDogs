@@ -4,6 +4,8 @@ import (
 	"context"
 	"log"
 	"net"
+  "time"
+  "github.com/fatih/color"
 
 	pb "github.com/yehdar/watchdogs/backend/proto"
 	"google.golang.org/grpc"
@@ -23,15 +25,21 @@ func (s *Server) AddComment(ctx context.Context, req *pb.CommentRequest) (*pb.Em
 }
 
 func main() {
-	lis, err := net.Listen("tcp", ":50051")
+	lis, err := net.Listen("tcp", port)
 	if err != nil {
 		log.Fatalf("Failed to listen: %v", err)
 	}
 
 	grpcServer := grpc.NewServer()
 	// pb.RegisterCommentServiceServer(grpcServer, &Server{}) 
-
-	log.Println("gRPC server is running on :50051")
+  log.Printf("server start at %v", lis.Addr())
+  color.Cyan("Messages Received:")
+  time.Sleep(2 * time.Second)
+  log.Printf("hey")
+  time.Sleep(1 * time.Second)
+  log.Printf("test")
+  time.Sleep(5 * time.Second)
+  log.Printf("hollup... let him cook")
 	
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
