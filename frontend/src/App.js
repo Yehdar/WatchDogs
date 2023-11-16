@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
@@ -23,17 +22,26 @@ function App() {
             type="video/mp4"
           />
         </video>
-        <div>
-          <h2>Comments</h2>
-          <u1>
+        <div className="mt-4">
+          <h2 className="text-xl font-bold mb-2">Comments</h2>
+          <u1 className="list-disc">
             {comments.map((comment, index) => (
               <li key={index}>{comment}</li>
             ))}
           </u1>
-          <div>
-            <textarea placeholder="aaaaa">
-              <button>Add Comment</button>
-            </textarea>
+          <div className="mt-4">
+            <textarea
+              className="w-full p-2 border rounded"
+              placeholder="aaaaa"
+              value={newComment}
+              onChange={(e) => setNewComment(e.target.value)}
+            ></textarea>
+            <button
+              className="mt-2 bg-blue-500 text-white p-2 rounded"
+              onClick={addComment}
+            >
+              Add Comment
+            </button>
           </div>
         </div>
       </div>
