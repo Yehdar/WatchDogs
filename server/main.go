@@ -33,13 +33,6 @@ func main() {
 	grpcServer := grpc.NewServer()
 	// pb.RegisterCommentServiceServer(grpcServer, &Server{}) 
   log.Printf("server start at %v", lis.Addr())
-  color.Cyan("Messages Received:")
-  time.Sleep(2 * time.Second)
-  log.Printf("hey")
-  time.Sleep(1 * time.Second)
-  log.Printf("test")
-  time.Sleep(5 * time.Second)
-  log.Printf("hollup... let him cook")
 	
 	if err := grpcServer.Serve(lis); err != nil {
 		log.Fatalf("Failed to serve: %v", err)
